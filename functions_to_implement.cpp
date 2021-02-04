@@ -43,10 +43,27 @@ std::vector<int> VectorTimesN(std::vector<int> v, int n);
 
 // takes in two integers and returns a vector of size n with
 // values n*1, n*2, n*3... up to n*m
-std::vector<int> Multiples(int n, int m);
+std::vector<int> Multiples(int n, int m){
+ std::vector<int> tmp;
+ for(int i=1;i=n;i++){
+	 int multiple = n * i; 
+ 	tmp.append(multiple);
+ }
+ return tmp;
+};
+
 
 // takes an integer n that is >= 0 and returns a vector of all squares up to n^n (1^1, 2^2, 3^3, .... n^n)
-std::vector<int> SquaresUntil(int n);
+std::vector<int> SquaresUntil(int n){
+	std::vector<int> tmp;
+	if(n>=0){
+		for(int i=1; i=n;i++){
+			int squares = i*i;
+			tmp.append(squares);
+		}
+	}
+	return tmp;
+};
 
 // takes an int, n, and returns the nth value of the fibonacci sequence (1, 1, 2, 3, 5, 8, 13, ...)
 int NthFibonacci(int n);
