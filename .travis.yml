@@ -1,0 +1,5 @@
+language: cpp
+#before_script: cd Spring21_Team2
+script:
+  - make
+  - ./test -s
