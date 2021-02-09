@@ -1,3 +1,6 @@
+#include<vector>
+#include<iostream>
+
 /* String functions section */
 
 // Splits a single string on separator into a vector of strings
@@ -90,19 +93,19 @@ std::vector<double> VectorTimesN(std::vector<double> v, double n);
 
 // takes in two doubles and returns a vector of size n with
 // values n*1, n*2, n*3... up to n*m
-std::vector<double> Multiples(double n, double m){
-  std::vector<double> = v;
-  for(int i=1;i< (int) n;i++){
-    v[i] = i*m;
-  }
-  return v;
-}
+// std::vector<double> Multiples(double n, double m){
+//   std::vector<double> v;
+//   for(int i=1;i< (int) n;i++){
+//     v[i] = i*m;
+//   }
+//   return v;
+// }
 
 // returns -1 if the number is negative and 1 if positive
-double Sign(double num){
-  if(num < 0) {return -1.0;}
-  else if (num > 0) {return 1.0;}
-  else {return 0.0};
+int Sign(int num){
+  if(num < 0) {return -1;}
+  else if (num > 0) {return 1;}
+  else {return 0;}
 }
 
 
