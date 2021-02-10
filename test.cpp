@@ -3,8 +3,11 @@
 #include "functions_to_implement.cpp"
 #include <vector>
 
-TEST_CASE( "The sign of a number is returned", "[Sign]" ) {
-    REQUIRE( Sign(0) == 0 );
-    REQUIRE( Sign(5) == 1 );
-    REQUIRE( Sign(-5) == -1 );
+TEST_CASE( "The product of all elements in a vector is returned", "[prod_vec]" ) {
+    std::vector<double> v1{0.0,1.0,2.0};
+    std::vector<double> v2{1.0,1.0,2.0};
+    std::vector<double> v3{1.0,1.5,2.0};
+    REQUIRE( Product(v1) == 0.0 );
+    REQUIRE( Product(v2) == 2.0 );
+    REQUIRE( Product(v3) == 3.0 );
 }
