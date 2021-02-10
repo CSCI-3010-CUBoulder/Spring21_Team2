@@ -49,8 +49,8 @@ std::vector<int> VectorTimesN(std::vector<int> v, int n);
 std::vector<int> Multiples(int n, int m){
  std::vector<int> tmp;
  for(int i=1;i=n;i++){
-	 int multiple = n * i; 
- 	tmp.append(multiple);
+	 int multiple = n * i;
+ 	tmp.push_back(multiple);
  }
  return tmp;
 };
@@ -62,7 +62,7 @@ std::vector<int> SquaresUntil(int n){
 	if(n>=0){
 		for(int i=1; i=n;i++){
 			int squares = i*i;
-			tmp.append(squares);
+			tmp.push_back(squares);
 		}
 	}
 	return tmp;
@@ -99,7 +99,7 @@ std::vector<bool> LessMask(std::vector<int> nums, int less_than);
 // Sums all numbers in a vector and returns the resulting value
 double Sum(std::vector<double> nums){
 	double total=0;
-	for(double j=0;j<nums.size();j++){{
+	for(double j=0;j<nums.size();j++){
 		total= total+ nums[j];
 	}
 };
