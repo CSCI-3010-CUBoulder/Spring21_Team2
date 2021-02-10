@@ -46,10 +46,27 @@ std::vector<int> VectorTimesN(std::vector<int> v, int n);
 
 // takes in two integers and returns a vector of size n with
 // values n*1, n*2, n*3... up to n*m
-std::vector<int> Multiples(int n, int m);
+std::vector<int> Multiples(int n, int m){
+ std::vector<int> tmp;
+ for(int i=1;i=n;i++){
+	 int multiple = n * i; 
+ 	tmp.append(multiple);
+ }
+ return tmp;
+};
+
 
 // takes an integer n that is >= 0 and returns a vector of all squares up to n^n (1^1, 2^2, 3^3, .... n^n)
-std::vector<int> SquaresUntil(int n);
+std::vector<int> SquaresUntil(int n){
+	std::vector<int> tmp;
+	if(n>=0){
+		for(int i=1; i=n;i++){
+			int squares = i*i;
+			tmp.append(squares);
+		}
+	}
+	return tmp;
+};
 
 // takes an int, n, and returns the nth value of the fibonacci sequence (1, 1, 2, 3, 5, 8, 13, ...)
 int NthFibonacci(int n);
@@ -80,7 +97,12 @@ std::vector<bool> GreaterMask(std::vector<int> nums, int greater_than);
 std::vector<bool> LessMask(std::vector<int> nums, int less_than);
 
 // Sums all numbers in a vector and returns the resulting value
-double Sum(std::vector<double> nums);
+double Sum(std::vector<double> nums){
+	double total=0;
+	for(double j=0;j<nums.size();j++){{
+		total= total+ nums[j];
+	}
+};
 
 // Multiplies all numbers in a vector together and returns the resulting value
 double Product(std::vector<double> nums){
@@ -108,11 +130,14 @@ std::vector<double> VectorTimesN(std::vector<double> v, double n);
 // }
 
 // returns -1 if the number is negative and 1 if positive
-int Sign(int num){
-  if(num < 0) {return -1;}
-  else if (num > 0) {return 1;}
-  else {return 0;}
-}
+double Sign(double num){
+	if (num <0){
+		return -1;
+	}
+	else{
+		return 1;
+	}
+};
 
 
 // adds n to each element of the vector
