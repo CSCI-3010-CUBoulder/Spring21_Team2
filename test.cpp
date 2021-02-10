@@ -1,13 +1,26 @@
-#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
+#define CATCH_CONFIG_MAIN 
 #include "catch.hpp"
-#include "functions_to_implement.cpp"
-#include <vector>
 
-TEST_CASE( "The product of all elements in a vector is returned", "[prod_vec]" ) {
-    std::vector<double> v1{0.0,1.0,2.0};
-    std::vector<double> v2{1.0,1.0,2.0};
-    std::vector<double> v3{1.0,1.5,2.0};
-    REQUIRE( Product(v1) == 0.0 );
-    REQUIRE( Product(v2) == 2.0 );
-    REQUIRE( Product(v3) == 3.0 );
-}
+double Sign(double num){
+	if (num <0){
+		return -1;
+	}
+	else{
+		return 1;
+	}
+};
+
+
+TEST_CASE( "Signs are tested","[sign]" ) {
+    double pos = 3;
+    double neg = -2;
+
+    SECTION("Positive input") {
+        REQUIRE( Sign(pos) == 1 );
+
+    }
+    SECTION("Negative input") {
+        REQUIRE( Sign(neg) == -1);
+
+    }
+};
